@@ -1,4 +1,4 @@
-import { ViewStyle } from 'react-native';
+import { ViewStyle } from "react-native";
 
 export interface IProps {
 	modalTitle: string;
@@ -14,6 +14,7 @@ export interface IProps {
 	storeRedirectThreshold: number;
 	onStarSelected: (e: number) => void;
 	onClosed: () => void;
+	onSendReview: (rating: number) => void;
 	sendContactUsForm: (state: IState) => void;
 	playStoreUrl?: string;
 	iTunesStoreUrl?: string;
