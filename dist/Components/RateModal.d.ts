@@ -15,6 +15,7 @@ export declare class RateModal extends Component<IProps, IState> {
         storeRedirectThreshold: number;
         starLabels: string[];
         isTransparent: boolean;
+        isReviewRequired: boolean;
     };
     constructor(props: IProps);
     render(): JSX.Element;

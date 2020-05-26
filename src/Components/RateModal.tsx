@@ -23,6 +23,7 @@ export class RateModal extends Component<IProps, IState> {
 		storeRedirectThreshold: 3,
 		starLabels: ["Terrible", "Bad", "Okay", "Good", "Great"],
 		isTransparent: true,
+		isReviewRequired: true,
 	};
 
 	constructor(props: IProps) {
@@ -213,8 +214,8 @@ export class RateModal extends Component<IProps, IState> {
 	}
 
 	private sendContactUsForm(): void {
-		const { sendContactUsForm } = this.props;
-		if (this.state.review.length > 0) {
+		const { sendContactUsForm, isReviewRequired } = this.props;
+		if (!isReviewRequired || this.state.review.length > 0) {
 			if (sendContactUsForm && typeof sendContactUsForm === "function") {
 				return sendContactUsForm({ ...this.state });
 			}

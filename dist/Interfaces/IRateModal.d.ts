@@ -20,6 +20,7 @@ export interface IProps {
     style: ViewStyle;
     starLabels: string[];
     isTransparent: boolean;
+    isReviewRequired: boolean;
 }
 export interface IState {
     rating: number;
